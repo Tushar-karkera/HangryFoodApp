@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_dark"
+    android:paddingStart="15sp"
+    android:paddingEnd="15sp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rounded_bg"
+        android:layout_width="389dp"
+        android:layout_height="336dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/visa_rounded_corners"
+        app:layout_constraintBottom_toBottomOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <ImageView
+        android:id="@+id/visa_ic"
+        android:layout_width="82dp"
+        android:layout_height="32dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/visa_icon"
+        app:layout_constraintBottom_toTopOf="@+id/num1"
+        app:layout_constraintEnd_toEndOf="@+id/rounded_bg"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.788" />
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rounded_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/num1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/num3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/num4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/num2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/num4"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rounded_bg"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/num3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.207" />
+
+    <TextView
+        android:id="@+id/holder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/space_mono"
+        android:text="CARD HOLDER"
+        app:layout_constraintBottom_toTopOf="@+id/cardholder"
+        app:layout_constraintEnd_toEndOf="@+id/num1"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:layout_constraintTop_toBottomOf="@+id/num1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/cardholder"
+        android:layout_width="236dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/space_mono"
+        app:layout_constraintBottom_toBottomOf="@+id/rounded_bg"
+        app:layout_constraintStart_toStartOf="@+id/holder_name"
+        app:layout_constraintTop_toBottomOf="@+id/num2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/space_mono"
+        android:text="EXP DATE"
+        app:layout_constraintBottom_toBottomOf="@+id/rounded_bg"
+        app:layout_constraintEnd_toEndOf="@+id/num4"
+        app:layout_constraintHorizontal_bias="0.964"
+        app:layout_constraintStart_toStartOf="@+id/rounded_bg"
+        app:layout_constraintTop_toBottomOf="@+id/num4"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:fontFamily="@font/space_mono"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/rounded_bg"
+        app:layout_constraintEnd_toEndOf="@+id/num4"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toEndOf="@+id/cardholder"
+        app:layout_constraintTop_toBottomOf="@+id/expiry"
+        app:layout_constraintVertical_bias="0.178" />
+
+    <ImageView
+        android:id="@+id/detailsEntry"
+        android:layout_width="match_parent"
+        android:layout_height="269dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:src="@drawable/visa_rounded_square"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rounded_bg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/editCVV"
+        android:layout_width="126dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:hint="CVV"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E8EAF6"
+        android:textColorHint="#E8EAF6"
+        app:layout_constraintBottom_toBottomOf="@+id/editExpiry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editExpiry"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:hint="Expiry"
+        android:inputType="none|datetime"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E8EAF6"
+        android:textColorHint="#E8EAF6"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/price_to_pay"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.816" />
+
+    <TextView
+        android:id="@+id/price_to_pay"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:fontFamily="@font/space_mono"
+        android:hint="Price to Pay"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E8EAF6"
+        android:textColorHint="#E8EAF6"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <EditText
+        android:id="@+id/editCardNumber"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:maxLength="16"
+        android:fontFamily="@font/space_mono"
+        android:hint="Card Number"
+        android:inputType="number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#E8EAF6"
+        android:textColorHint="#E8EAF6"
+        app:layout_constraintBottom_toBottomOf="@+id/detailsEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider"
+        app:layout_constraintVertical_bias="0.216" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="286dp"
+        android:layout_height="54dp"
+        android:background="@drawable/btn_rounded"
+        android:text="proceed to pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsEntry" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

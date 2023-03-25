@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HangryApp</string>
+    <string name="server_domain">https://hangry.onrender.com/user/verify</string>
+</resources>

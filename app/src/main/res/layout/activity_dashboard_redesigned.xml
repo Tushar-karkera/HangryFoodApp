@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".dashboard_redesigned">
+
+    <View
+        android:id="@+id/viewHeaderBackground"
+        android:layout_width="match_parent"
+        android:layout_height="125sp"
+        android:background="@color/primary"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/foodName_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24sp"
+        android:layout_marginTop="16sp"
+        android:text="Welcome Foodie!!!"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/scanner"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginEnd="16sp"
+        android:layout_marginRight="16sp"
+        android:src="@drawable/ic_qr_code_scanner"
+        app:layout_constraintBottom_toBottomOf="@id/foodName_new"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/foodName_new"
+        android:tint="@color/white"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16sp"
+        android:layout_marginEnd="16sp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeaderBackground"
+        app:layout_constraintTop_toBottomOf="@id/viewHeaderBackground"
+        >
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14sp"
+            >
+            <TextView
+                android:id="@+id/textViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shot views"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:textColor="@color/primary"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <LinearLayout
+                android:id="@+id/layoutClients"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/layoutImpacted"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViews"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/ic_clients"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="reviews"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:id="@+id/reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.1K"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutImpacted"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@id/layoutFollowing"
+                app:layout_constraintStart_toEndOf="@id/layoutClients"
+                app:layout_constraintTop_toBottomOf="@id/textViews"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/ic_impacted"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Deliver Time"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:id="@+id/deliverTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14 mins"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFollowing"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8sp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/layoutImpacted"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViews"
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="28sp"
+                    android:layout_height="28sp"
+                    android:src="@drawable/ic_following"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4sp"
+                    android:text="Food Items"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"
+                    />
+                <TextView
+                    android:id="@+id/noOofFood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:clipToPadding="false"-->
+<!--        android:overScrollMode="never"-->
+<!--        android:padding="10sp"-->
+<!--        android:scrollbars="none"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/cardHeader"-->
+<!--        >-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            >-->
+<!--            <include layout="@layout/dashboard_item_1"/>-->
+<!--            <include layout="@layout/dashboard_item_2"/>-->
+<!--            <include layout="@layout/dashboard_item_3"/>-->
+<!--            <include layout="@layout/dashboard_item_4"/>-->
+<!--        </LinearLayout>-->
+
+<!--    </ScrollView>-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/FoodRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="7sp"
+        android:paddingStart="5sp"
+        android:paddingEnd="3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardHeader">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>
