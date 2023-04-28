@@ -23,3 +23,103 @@ Overall, the Hangry app is a versatile and user-friendly solution for enhancing 
 experience at restaurants. It provides a convenient and efficient way for customers to browse
 menus, place orders, and make payments, while also offering benefits for restaurants in terms of
 cost savings and operational efficiency.
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /user
+```
+
+| Parameter | Type     | Description                    |
+| :-------- | :------- | :-------------------------     |
+| `{username}` | `object` | all user info |
+
+#### Get item
+
+```http
+  POST /user/verify
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `{username,password}`      | `object` | true or false |
+
+```http
+  GET /hoteluser
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `null`      | `object` | all hotel owner info |
+
+```http
+  POST /hoteluser
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `{hotelName,foodItems}`      | `object` | saves the hotel owner details |
+
+
+```http
+  POST /hoteluser/verify
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `{hotelName,password}`      | `object` | returns true or false |
+
+
+```http
+  POST /food/:hotelname
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `{hotelName}`      | `object` | returns food items of a particular hotel |
+
+
+```http
+  POST /order
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `{hotelName}`      | `object` | returns fooditems ordered for a particular hotel |
+
+
+
+
+
+## Appendix
+
+Concept and Idea inspired by businesses like Zomato and Swiggy.
+
+
+## Authors
+
+- [@Tushar-Karkera](https://www.github.com/Tushar-karkera)
+
+
+
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Orange | ![#d17c21](https://via.placeholder.com/10/d17c21?text=+) #d17c21 |
+| White | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Grey | ![#57524c](https://via.placeholder.com/10/57524c?text=+) #00b48a |
+| Green | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
+
+
+## Contributing
+
+Contributions are always welcome!
+
+Get in touch to contribute.
+
+Please adhere to this project's `code of conduct`.
+
